@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --titleColor: #BBE1FA;
+    --fontColor: #FCDAB7;
+    --darkColor: #1D2D50;
+    --semiDarkColor: #133B5C;
+    --mildColor: #1E5F74;
+}
+
+body {
+    background-color: var(--darkColor);
+    padding: 2rem 0;
+}
+
+/* Title */
+
+h1 {
+    color: var(--titleColor);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Message */
+
+.message {
+    display: none;
+    color: var(--fontColor);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Puzzle */
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+main div {
+    display: grid;
+    height: fit-content;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+/* Styles for items of puzzle and pieces */
+
+main div .item {
+    padding: 0;
+}
+
+.item {
+    grid-column: span 1;
+}
+
+
+/* Styles for items of puzzle */
+
+#puzzle .item {
+    margin: 0;
+}
+
+.puzzle-item {
+    border: 1px solid var(--mildColor);
+}
+
+.puzzle-item.puzzle-item-hover {
+    background-color: var(--mildColor);
+}
+
+/* Styles for items of pieces */
+
+.pieces-item {
+    margin: 0.5rem;
+    cursor: grabbing;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/* Finish */
+
+.finish #puzzle .item {
+    border: none;
+}
+
+.finish .message {
+    display: block;
+}
+
+.finish #pieces {
+    display: none;
+}

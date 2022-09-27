@@ -1,0 +1,25 @@
+@media screen and (max-width: 525px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .message {
+        font-size: 1.25em;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main > div {
+        width: 240px;
+    }
+
+    main div .item {
+        width: 5rem;
+        height: 6.2rem;
+    }
+
+    
+}
